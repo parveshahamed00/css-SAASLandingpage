@@ -23,6 +23,10 @@ nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav h1{
+    display: none;
 }
 nav ul li{
     color: #f0f8ff;
@@ -42,7 +46,6 @@ nav button{
     border: 0;
     background-color:#00ffff;
     padding: 1%;
-    width: 10%;
 }
 nav button:hover{
     background-color: #7030CC;
@@ -56,6 +59,7 @@ nav button:hover{
     margin-top: 2%;
     display: flex;
     align-items: center;
+    /* flex-wrap: wrap; */
 }
 .top-content .right{
     width: 100%;
@@ -109,6 +113,7 @@ color: yellowgreen;
     margin-top: 10%;
  display: flex;   
  justify-content: space-between;
+ flex-wrap: wrap;
 }
 .cards .text{
     padding-bottom: 1%;
@@ -164,4 +169,55 @@ color: #A343AE;
 .footer{
     padding: 3% 0;
     background-color: #E5E5E5;
+}
+
+@media only screen and (max-width: 768px){
+nav h1{
+    display: unset;
+    font-size: 1.6em;
+    color: #BFA2E8;
+}
+nav .nav-lists{
+    display: none;
+}
+nav{
+    position: relative;
+    margin-bottom: 10%;
+}
+nav button{
+    position: absolute;
+    right: 10%;
+}
+.top .top-content{
+    flex-wrap: wrap;
+}
+.top .top-content .right{
+    display: flex;
+    justify-content: center;
+}
+.top .top-content img{
+width: 60%;
+}
+.middle{
+    flex-wrap: wrap;
+}
+.middle .left{
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.middle .left img{
+    width: 45%;
+}
+.top-content .left h1{
+    font-size: 2.3em;
+}
+.middle .right h1{
+    font-size: 2.3em;
+}
+.bottom .cards{
+    width: auto;
+    padding: 2% 30%;
+}
 }
